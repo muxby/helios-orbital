@@ -1,0 +1,77 @@
+[
+  {
+    "id": "1. ISS + inspector + IBM Plex",
+    "ok": true,
+    "detail": "name=ISS (ZARYA) fonts.wordmark=\"IBM Plex Sans\", ui-sans-serif, system-ui, sans-serif, ui-sans-serif, system-ui, sans-serif, ui-sans-serif, system-ui fonts.norad=\"IBM Plex Mono\", ui-monospace, \"Cascadia Mono\", monospace, ui-monospace, monospace, ui-monospace, monospace norad=true"
+  },
+  {
+    "id": "2. Houston observer + pass rows",
+    "ok": true,
+    "detail": "city=houston/Houston lat=29.7604 lon=-95.3698 passRows=10 next=NEXT PASS · 72H 08:10:08 MAX EL 20.9°"
+  },
+  {
+    "id": "3a. Globe not blank (pre-home)",
+    "ok": true,
+    "detail": "canvas={\"w\":1416,\"h\":808,\"mean\":43.27875980000335,\"std\":38.09114172827001,\"darkFrac\":0.56475,\"brightFrac\":0.4324375,\"greenish\":3,\"cyanish\":6938,\"n\":16000}"
+  },
+  {
+    "id": "3. H / home camera full Earth",
+    "ok": true,
+    "detail": "canvas={\"w\":1416,\"h\":808,\"mean\":12.853631549998346,\"std\":15.832964032609416,\"darkFrac\":0.8925625,\"brightFrac\":0.048125,\"greenish\":39,\"cyanish\":695,\"n\":16000}"
+  },
+  {
+    "id": "4. Terminator toggle",
+    "ok": true,
+    "detail": "checkedBefore=true meanOff=12.441540562498478 meanOn=12.856613224998348 stdOff=14.430983189079962 stdOn=15.804437144411033"
+  },
+  {
+    "id": "5. Coverage footprint",
+    "ok": true,
+    "detail": "greenish on=40 afterH=39 (green ring samples)"
+  },
+  {
+    "id": "6a. Share URL params",
+    "ok": true,
+    "detail": "clip=http://localhost:3000/?norad=25544&lat=29.7604&lon=-95.3698&t=1788034133273 reconstructed=http://localhost:3000/?norad=25544&lat=29.7604&lon=-95.3698&t=1788034133489"
+  },
+  {
+    "id": "6b. Share URL hydrates selection",
+    "ok": true,
+    "detail": "name=ISS (ZARYA) city=houston lat=29.7604 url=http://localhost:3000/?norad=25544&lat=29.7604&lon=-95.3698&t=1788034133273 t=1788034133273"
+  },
+  {
+    "id": "7. Cheatsheet lists H F P C M G",
+    "ok": true,
+    "detail": "open=true text=KEYBOARD ⌘ / Ctrl K Command palette ? This cheatsheet Esc Close overlay / clear Space Play / pause — ignored while typing in search [ ] Sim rate down / up / Focus catalog search H Home / reset camera (full Earth) F Fullscreen P Pass predictor C Conjunction board M Toggle 2D map G Go to ISS Click pass row Select sat, jump clock to AOS"
+  },
+  {
+    "id": "8. Catalog object-type legend",
+    "ok": true,
+    "detail": "legend=PAYLOADR/BDEBRISUNK"
+  },
+  {
+    "id": "3b. G zoom then H restores Earth",
+    "ok": true,
+    "detail": "afterG mean=12.924955212498912 std=21.100931986568607 afterH mean=12.936208387498327 std=15.929660489548214"
+  },
+  {
+    "id": "2b. Pass predictor panel rows",
+    "ok": false,
+    "detail": "hasPredictor=true hasAos=false"
+  },
+  {
+    "id": "key M / 2D map",
+    "ok": true,
+    "detail": "clicked 2D map"
+  },
+  {
+    "id": "key C opens conjunctions",
+    "ok": true,
+    "detail": "hasConjunction=true"
+  },
+  {
+    "id": "screenshot button click",
+    "ok": true,
+    "detail": "clicked Screenshot; download may be suppressed in headless"
+  }
+]

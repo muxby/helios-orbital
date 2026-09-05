@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+:root {
+  --background: #070b14;
+  --foreground: #e8eef7;
+  --bg: #070b14;
+  --panel: rgba(12, 18, 32, 0.78);
+  --panel-solid: #0c1220;
+  --line: rgba(34, 211, 238, 0.18);
+  --cyan: #22d3ee;
+  --cyan-dim: rgba(34, 211, 238, 0.12);
+  --amber: #f5a524;
+  --nominal: #34d399;
+  --crit: #f43f5e;
+  --text: #e8eef7;
+  --muted: #9aabc4;
+  --topbar: 48px;
+  --rail: 320px;
+  --inspector: 340px;
+  --timedock: 88px;
+  --font-ibm-plex-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-ibm-plex-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+  --font-geist-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-geist-mono: ui-monospace, monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-ibm-plex-sans), var(--font-geist-sans), ui-sans-serif, system-ui;
+  --font-mono: var(--font-ibm-plex-mono), var(--font-geist-mono), ui-monospace, monospace;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ibm-plex-sans), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+#helios-root {
+  height: 100%;
+  min-height: 100dvh;
+  background: var(--bg);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.helios-panel {
+  background: var(--panel);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--line);
+}
+
+.helios-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(34, 211, 238, 0.28) transparent;
+}
+
+.helios-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.helios-scroll::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.28);
+  border-radius: 999px;
+}
+
+.helios-scan {
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.015) 0px,
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+.helios-vignette {
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 42%, rgba(7, 11, 20, 0.72) 100%);
+}
+
+input[type="range"].helios-scrub {
+  appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(34, 211, 238, 0.15), rgba(34, 211, 238, 0.55));
+  outline: none;
+}
+
+input[type="range"].helios-scrub::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--cyan);
+  border: 2px solid #071018;
+  cursor: pointer;
+}
+
+input[type="range"].helios-scrub:focus-visible {
+  box-shadow: 0 0 0 2px var(--cyan);
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.28);
+  color: #fff;
+}
+
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
