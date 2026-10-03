@@ -12,6 +12,8 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) — ISS: [http://localhost:3000/?norad=25544](http://localhost:3000/?norad=25544)
 
+<img width="1416" height="808" alt="image" src="https://github.com/user-attachments/assets/4ea7c79a-7906-4edd-98ab-1362006e24c7" />
+
 ```bash
 npm run build
 npm test
@@ -80,7 +82,7 @@ flowchart LR
 
 | Key | Action |
 |---|---|
-| `⌘K` / `Ctrl+K` | Palette |
+| `⌘+K` / `Ctrl+K` | Palette |
 | `?` | Cheatsheet |
 | Space | Play / pause |
 | `[` `]` | Rate |
