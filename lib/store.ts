@@ -229,7 +229,7 @@ export const useHeliosStore = create<HeliosState>((set, get) => ({
     let selectedNoradId: number | null = get().selectedNoradId;
     let lat = Number.isFinite(observer.lat) ? observer.lat : DEFAULT_OBSERVER.lat;
     let lon = Number.isFinite(observer.lon) ? observer.lon : DEFAULT_OBSERVER.lon;
-    let altM = Number.isFinite(observer.altM) ? observer.altM : DEFAULT_OBSERVER.altM;
+    const altM = Number.isFinite(observer.altM) ? observer.altM : DEFAULT_OBSERVER.altM;
     let epochMs: number | null = null;
     if (typeof window !== "undefined") {
       const parsed = parseHeliosSearch(window.location.search);
